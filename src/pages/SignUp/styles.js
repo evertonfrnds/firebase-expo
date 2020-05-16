@@ -52,18 +52,9 @@ export const FormSubmit = styled.TouchableOpacity`
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    margin: 15px 0;
+    margin: 20px 0;
 `;
 export const SubmitLabel = styled.Text`
     font-weight:bold;
     color: white;
-`;
-export const SingUpContainer = styled.View`
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-`;
-export const SingUpLabel = styled.Text`
-    color: ${p=>p.color?p.color:'white'};
 `;
