@@ -10,7 +10,7 @@ export default function AuthRoutes(){
 
     return(
         <AuthStack.Navigator >
-            <AuthStack.Screen/>
+            <AuthStack.Screen options={{headerShown: false}} name='SignIn' component={SignIn}/>
         </AuthStack.Navigator>
     )
 }

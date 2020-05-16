@@ -12,7 +12,7 @@ import {
     SubmitLabel
 } from './styles'
 
-export default function SingIn() {
+export default function Home() {
 
     return (
         <Container>
