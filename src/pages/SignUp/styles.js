@@ -31,20 +31,7 @@ export const FormInput = styled.TextInput`
     margin-top: 15px;
     border-radius: 5px;
 `;
-export const Row = styled.View`
-    flex-direction: row;
-    width:90%;
-    margin-top: 15px;
-    align-items: center;
-`;
-export const Icon = styled(Ionicons).attrs({
-    size:24,
-    color: '#00C9A7'
-})``;
-export const FormLabel = styled.Text`
-    color: #555;
-    margin-left: 10px;
-`;
+
 export const FormSubmit = styled.TouchableOpacity`
     background-color: #00C9A7;
     width: 90%;

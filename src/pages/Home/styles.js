@@ -8,53 +8,31 @@ export const Container = styled(LinearGradient).attrs({
     end:{x: 1, y: 1}
 })`
     flex: 1;
-    justify-content: center;
     align-items: center;
+    padding: 10px 30px;
 `;
-export const FormLoginContainer = styled.View`
-    background-color: #fff;
-    width: 80%;
-    min-height: 100px;
-    border-radius: 10px;
-    align-items: center;
-    padding: 5px;
-`;
-export const FormTitle = styled.Text`
-    font-size: 20px;
+export const Header = styled.Text`
+    margin-top: 40px;
     font-weight: bold;
-    margin-top: 10px;
-`;
-export const FormInput = styled.TextInput`
-    padding: 10px 15px;
-    background-color: #f3f3f3;
-    width: 90%;
-    margin-top: 15px;
-    border-radius: 5px;
-`;
-export const Row = styled.View`
-    flex-direction: row;
-    width:90%;
-    margin-top: 15px;
-    align-items: center;
-`;
-export const Icon = styled(Ionicons).attrs({
-    size:24,
-    color: '#00C9A7'
-})``;
-export const FormLabel = styled.Text`
-    color: #555;
-    margin-left: 10px;
-`;
-export const FormSubmit = styled.TouchableOpacity`
-    background-color: #00C9A7;
-    width: 90%;
-    padding:15px;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    margin: 15px 0;
-`;
-export const SubmitLabel = styled.Text`
-    font-weight:bold;
     color: white;
+    font-size: 18px;
+    margin-bottom: 20px;
+`;
+export const SearchBar = styled.View`
+    flex-direction: row;
+    background: white;
+    width: 100%;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+
+`;
+export const SearchInput = styled.TextInput`
+`;
+export const SearchIcon = styled(Ionicons).attrs({
+    size: 24,
+    color: '#999'
+})`
+    
 `;

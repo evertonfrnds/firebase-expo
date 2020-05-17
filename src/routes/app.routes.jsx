@@ -10,7 +10,7 @@ export default function AppRoutes(){
 
     return(
         <AppStack.Navigator>
-            <AppStack.Screen name='Home' component={Home}/>
+            <AppStack.Screen options={{headerShown:false}} name='Home' component={Home}/>
         </AppStack.Navigator>
     )
 }

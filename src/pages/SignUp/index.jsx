@@ -5,9 +5,6 @@ import {
     FormLoginContainer,
     FormTitle,
     FormInput,
-    Row,
-    Icon,
-    FormLabel,
     FormSubmit,
     SubmitLabel
 } from './styles'
@@ -20,7 +17,6 @@ export default function SignUp() {
             <FormLoginContainer>
                 <FormTitle>
                     Sign Up
-                
                 </FormTitle>
                 <FormInput placeholder='Name'/>
                 <FormInput autoCapitalize='none' placeholder='User'/>
