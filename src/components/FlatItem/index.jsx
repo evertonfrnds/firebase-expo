@@ -13,13 +13,13 @@ export default function FlatItem({data}) {
         <Container>
             <UserContainer>
                 <Name>
-                    Everton Fernandes
+                    {data.name}
                 </Name>
                 <Label>
-                    Idade: 21
+                    Idade: {data.age}
                 </Label>
                 <Label>
-                    evertonfrnds@gmail.com
+                    {data.email}
                 </Label>
             </UserContainer>
             <Icon/>

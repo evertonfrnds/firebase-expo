@@ -1,57 +1,30 @@
-import React from 'react'
-import { StatusBar, FlatList, View, Dimensions } from 'react-native'
+import React,{useEffect, useState} from 'react'
+import { StatusBar, FlatList, View, TouchableWithoutFeedback } from 'react-native'
 import {
     Container,
     Header,
     SearchBar,
     SearchIcon,
     SearchInput,
-    List
 } from './styles'
 
 import FlatItem from '../../components/FlatItem'
 
-
-const data = [
-    {
-        id: 1,
-        name: 'Everton Fernandes',
-        age: '21',
-        email: 'evertonfrnds@gmail.com'
-    },
-    {
-        id: 2,
-        name: 'Bianca Azevedo',
-        age: '18',
-        email: 'beacanz@gmail.com'
-    },
-    {
-        id: 3,
-        name: 'Leticia Fernandes',
-        age: '22',
-        email: 'evertonfrnds@gmail.com'
-    },
-    {
-        id: 4,
-        name: 'Everton Fernandes',
-        age: '21',
-        email: 'evertonfrnds@gmail.com'
-    },
-    {
-        id: 5,
-        name: 'Leticia Fernandes',
-        age: '22',
-        email: 'evertonfrnds@gmail.com'
-    },
-    {
-        id: 6,
-        name: 'Everton Fernandes',
-        age: '21',
-        email: 'evertonfrnds@gmail.com'
-    },
-]
+import {getUsers, newUser} from '../../services/api'
+import {data} from '../../services/data'
 
 export default function Home() {
+
+    const [dados, setDados] = useState([])
+    const [name, setName] = useState('')
+    useEffect(()=>{
+        getUsers(setDados)
+    },[])
+
+    function create(){
+        newUser(name);
+        getUsers(setDados);
+    }
 
     return (
         <Container>
@@ -60,15 +33,18 @@ export default function Home() {
                 Inicio
             </Header>
             <SearchBar>
-                <SearchInput placeholder='Pesquisa' />
-                <SearchIcon name='ios-search' />
+                <SearchInput placeholder='Pesquisa' onChangeText={setName} value={name}/>
+                <TouchableWithoutFeedback onPress={()=>console.log('olá')
+                }>
+                    <SearchIcon name='ios-search' />
+                </TouchableWithoutFeedback>
             </SearchBar>
             <View style={{flex: 1, marginTop: 10}}>
                 <FlatList
                     data={data}
                     showsVerticalScrollIndicator={false}
                     renderItem={({ item }) => (
-                        <FlatItem/>
+                        <FlatItem data={item}/>
                     )}
                     keyExtractor={item => item.id}
                 />

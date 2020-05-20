@@ -10,6 +10,7 @@ export const Container = styled(LinearGradient).attrs({
     flex: 1;
     align-items: center;
     padding: 10px 30px;
+    padding-bottom: 60px;
 `;
 export const Header = styled.Text`
     margin-top: 40px;
@@ -23,12 +24,12 @@ export const SearchBar = styled.View`
     background: white;
     width: 100%;
     border-radius: 5px;
-    justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
 
 `;
 export const SearchInput = styled.TextInput`
+    flex: 1
 `;
 export const SearchIcon = styled(Ionicons).attrs({
     size: 24,
